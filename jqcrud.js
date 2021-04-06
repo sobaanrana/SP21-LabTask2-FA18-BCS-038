@@ -10,7 +10,7 @@ function addProduct() {
         method: "POST",
         data: {name, price},
         success: function(response) {
-            //('#products').append('<div>RANA SOBAAN</div>')
+            ('#products').append('<div>RANA SOBAAN</div>')
             readProduct();
         }
     });
@@ -30,5 +30,5 @@ function readProduct() {
 
             }
         }
-    })
+    });
 }
