@@ -3,12 +3,12 @@ $(function () {
 });
 
 function addProduct() {
-    var n = $('#name').val();
-    var p = $('#price').val();
+    var name = $('#name').val();
+    var price = $('#price').val();
     $.ajax({
-        url: "https://sp21-labtask2-fa18-bcs-038.herokuapp.com/",
+        url: "https://usman-recipes.herokuapp.com/api/products",
         method: "POST",
-        data: {name: n , price: p},
+        data: {name, price, color, department, description},
         success: function() {
            // ('#products').append('<div>RANA SOBAAN</div>')
             readProduct();
@@ -19,7 +19,7 @@ function addProduct() {
 
 function readProduct() {
     $.ajax({
-        url: "https://sp21-labtask2-fa18-bcs-038.herokuapp.com/",
+        url: "https://usman-recipes.herokuapp.com/api/products",
         method: "GET",
         success: function(response) {
             console.log(response);
@@ -29,7 +29,7 @@ function readProduct() {
 
             for(var i; i<response.length ; i++) {
                 var p = response[i];
-                products.append(`<div> <h4> Name : ${p.name} </h4> <h3> Price : ${p.price}</h3>`)
+                products.append(`<div> <> Name : ${p.name} Price : ${p.price} Color : ${p.color}, Department = ${p.department} : , Description : ${p.description}</p>`)
             }
         }
     });
