@@ -22,6 +22,7 @@ function readProduct() {
         url: "https://sp21-labtask2-fa18-bcs-038.herokuapp.com/",
         method: "GET",
         success: function(response) {
+            console.log(response);
             var products = $('#products');
 
             for(var i; i<response.length ; i++) {
