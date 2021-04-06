@@ -1,5 +1,5 @@
 $(function () {
-    $('#btnAdd').click(addProduct)
+    $('#btnAdd').click(addProduct);
 });
 
 function addProduct() {
@@ -23,11 +23,13 @@ function readProduct() {
         method: "GET",
         success: function(response) {
             console.log(response);
+            
             var products = $('#products');
+            products.empty();
 
             for(var i; i<response.length ; i++) {
-                var p = products[i];
-                $('#products').append(`<div> <h4> Name : ${p.name} </h4> <h3> Price : ${p.price}</h3>`)
+                var p = response[i];
+                products.append(`<div> <h4> Name : ${p.name} </h4> <h3> Price : ${p.price}</h3>`)
 
             }
         }
