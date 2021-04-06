@@ -5,6 +5,9 @@ $(function () {
 function addProduct() {
     var name = $('#name').val();
     var price = $('#price').val();
+    var color = $('#color').val();
+    var department = $('#department').val();
+    var description = $('#description').val();
     $.ajax({
         url: "https://usman-recipes.herokuapp.com/api/products",
         method: "POST",
