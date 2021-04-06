@@ -10,7 +10,7 @@ function addProduct() {
         method: "POST",
         data: {name, price},
         success: function(response) {
-            ('#products').append('<div>RANA SOBAAN</div>')
+           // ('#products').append('<div>RANA SOBAAN</div>')
             readProduct();
         }
     });
@@ -21,7 +21,7 @@ function readProduct() {
     $.ajax({
         url: "https://sp21-labtask2-fa18-bcs-038.herokuapp.com/",
         method: "GET",
-        success: function() {
+        success: function(response) {
             var products = $('#products');
 
             for(var i; i<response.length ; i++) {
