@@ -13,7 +13,7 @@ function addProduct() {
         url: "https://usman-recipes.herokuapp.com/api/products/",
         method: "POST",
         data: {name, price, color, department, description},
-        success: function() {
+        success: function(response) {
            // ('#products').append('<div>RANA SOBAAN</div>')
             readProduct();
         }
