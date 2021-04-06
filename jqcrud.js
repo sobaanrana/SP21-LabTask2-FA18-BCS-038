@@ -10,7 +10,7 @@ function addProduct() {
     var department = $('#department').val();
     var description = $('#description').val();
     $.ajax({
-        url: "https://usman-recipes.herokuapp.com/api/products/",
+        url: "https://usman-recipes.herokuapp.com/api/products",
         method: "POST",
         data: {name, price, color, department, description},
         success: function(response) {
