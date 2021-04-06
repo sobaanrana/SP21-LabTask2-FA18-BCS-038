@@ -36,7 +36,7 @@ function readProduct() {
             for(var i=0 ; i<response.length ; i++) {
                 var p = response[i];
                 products.append(
-                    `<div class="product"> <h2> ${p.name} </h2> <b>Price</b> : ${p.price} <br> Color : ${p.color} <br> Department : ${p.department} <br> Description : ${p.description} <br></div>`
+                    `<div class="product"> <h2> ${p.name} </h2> <button class = "btn btn-danger">Delete</button> <b>Price</b> : ${p.price} <br> Color : ${p.color} <br> Department : ${p.department} <br> Description : ${p.description} <br></div>`
                     );
             }
         }
