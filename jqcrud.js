@@ -33,7 +33,7 @@ function readProduct() {
 
             for(var i; i<response.length ; i++) {
                 var p = response[i];
-                products.append(`<div> <> Name : ${p.name} Price : ${p.price} Color : ${p.color}, Department = ${p.department} : , Description : ${p.description}</p>`)
+                products.append(`<div> Name : ${p.name} Price : ${p.price} Color : ${p.color} Department : ${p.department} Description : ${p.description}</div>`);
             }
         }
     });
