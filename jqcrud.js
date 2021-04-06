@@ -10,8 +10,8 @@ function addProduct() {
         method: "POST",
         data: {name, price},
         success: function(response) {
-            //$('#products').append(`<div> <h4> Name : ${name} </h4> <h3> Price : ${price}</h3>`)
-            $('#products').append('<div>RANA SOBAAN</div>')
+            $('#products').append(`<div> <h4> Name : ${name} </h4> <h3> Price : ${price}</h3>`)
+            //('#products').append('<div>RANA SOBAAN</div>')
         }
     });
 
