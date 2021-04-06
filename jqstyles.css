@@ -1,4 +1,4 @@
-.recipe {
-  border-bottom: 2px dashed blue;
-  margin-bottom: 5px;
+.product {
+  border: 1px dashed red;
+  margin: 5px;
 }
