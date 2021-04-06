@@ -1,4 +1,5 @@
 $(function () {
+    readProduct();
     $('#btnAdd').click(addProduct);
 });
 
