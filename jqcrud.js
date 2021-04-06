@@ -14,7 +14,9 @@ function addProduct() {
         method: "POST",
         data: {name, price, color, department, description},
         success: function(response) {
+            console.log(response);
            // ('#products').append('<div>RANA SOBAAN</div>')
+            $('#name').val("");
             readProduct();
         }
     });
