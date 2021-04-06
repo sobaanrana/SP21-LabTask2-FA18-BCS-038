@@ -9,7 +9,7 @@ function addProduct() {
         url: "https://sp21-labtask2-fa18-bcs-038.herokuapp.com/",
         method: "POST",
         data: {name, price},
-        success: function(response) {
+        success: function() {
            // ('#products').append('<div>RANA SOBAAN</div>')
             readProduct();
         }
@@ -30,7 +30,6 @@ function readProduct() {
             for(var i; i<response.length ; i++) {
                 var p = response[i];
                 products.append(`<div> <h4> Name : ${p.name} </h4> <h3> Price : ${p.price}</h3>`)
-
             }
         }
     });
