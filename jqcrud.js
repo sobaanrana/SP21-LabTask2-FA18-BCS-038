@@ -3,12 +3,12 @@ $(function () {
 });
 
 function addProduct() {
-    var name = $('#name').val();
-    var price = $('#price').val();
+    var n = $('#name').val();
+    var p = $('#price').val();
     $.ajax({
         url: "https://sp21-labtask2-fa18-bcs-038.herokuapp.com/",
         method: "POST",
-        data: {name, price},
+        data: {name: n , price: p},
         success: function() {
            // ('#products').append('<div>RANA SOBAAN</div>')
             readProduct();
