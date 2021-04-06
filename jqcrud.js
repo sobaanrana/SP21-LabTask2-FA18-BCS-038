@@ -23,7 +23,7 @@ function addProduct() {
 
 function readProduct() {
     $.ajax({
-        url: "https://usman-recipes.herokuapp.com/api/products/",
+        url: "https://usman-recipes.herokuapp.com/api/products",
         method: "GET",
         success: function(response) {
             console.log(response);
@@ -31,9 +31,11 @@ function readProduct() {
             var products = $('#products');
             products.empty();
 
-            for(var i; i<response.length ; i++) {
+            for(var i=0 ; i<response.length ; i++) {
                 var p = response[i];
-                products.append(`<div> Name : ${p.name} Price : ${p.price} Color : ${p.color} Department : ${p.department} Description : ${p.description}</div>`);
+                products.append(
+                    `<div> Name : ${p.name} Price : ${p.price} Color : ${p.color} Department : ${p.department} Description : ${p.description}</div>`
+                    );
             }
         }
     });
