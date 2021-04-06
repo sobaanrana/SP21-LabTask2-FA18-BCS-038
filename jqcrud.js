@@ -1,6 +1,6 @@
 $(function () {
     readProduct();
-    $('#btnAdd').click(addProduct);
+    $('#addBtn').click(addProduct);
 });
 
 function addProduct() {
@@ -14,10 +14,11 @@ function addProduct() {
         method: "POST",
         data: {name, price, color, department, description},
         success: function(response) {
-            console.log(response);
+            //console.log(response);
            // ('#products').append('<div>RANA SOBAAN</div>')
             $('#name').val("");
             readProduct();
+            $("#addModal").modal("hide");
         }
     });
 
@@ -28,7 +29,7 @@ function readProduct() {
         url: "https://usman-recipes.herokuapp.com/api/products",
         method: "GET",
         success: function(response) {
-            console.log(response);
+            //console.log(response);
             
             var products = $('#products');
             products.empty();
