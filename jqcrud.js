@@ -3,8 +3,8 @@ $(function () {
 });
 
 function addProduct() {
-    var name = $('#name');
-    var price = $('#price');
+    var name = $('#name').val();
+    var price = $('#price').val();
     $.ajax({
         url: "https://sp21-labtask2-fa18-bcs-038.herokuapp.com/",
         method: "POST",
